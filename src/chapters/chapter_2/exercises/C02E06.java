@@ -21,6 +21,8 @@ public class C02E06 {
 		
 		System.out.println("The sum of all digits is " + sum);
 		
+		input.close();
+		
 		
 		
 	}
