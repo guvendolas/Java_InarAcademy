@@ -8,13 +8,13 @@ public class C03E15 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Guess a three digit number for the lottery:");
 		int guess = input.nextInt();
-		int lottery = (int) (Math.random() * 90) + 10;
+		int lottery = (int) (Math.random() * 900) + 100;
 
-		int lotteryTenDigits = lottery / 10;
-		int LotteryOneDigits = lottery % 10;
+		int lotteryTenDigits = lottery / 100;
+		int LotteryOneDigits = lottery % 100;
 
-		int guessTenDigits = guess / 10;
-		int guessOneDigits = guess % 10;
+		int guessTenDigits = guess / 100;
+		int guessOneDigits = guess % 100;
 
 		System.out.println("Lottery number " + lottery);
 

@@ -9,15 +9,15 @@ public class C03E09 {
 
 		System.out.println("Enter the first 9 digits of an ISBN as integer: ");
 
-		int d1 = 0;
-		int d2 = 1;
-		int d3 = 3;
-		int d4 = 6;
-		int d5 = 0;
-		int d6 = 1;
-		int d7 = 2;
-		int d8 = 6;
-		int d9 = 7;
+		int d1 = input.nextInt();
+		int d2 = input.nextInt();
+		int d3 = input.nextInt();
+		int d4 = input.nextInt();
+		int d5 = input.nextInt();
+		int d6 = input.nextInt();
+		int d7 = input.nextInt();
+		int d8 = input.nextInt();
+		int d9 = input.nextInt();
 		int d10;
 
 		System.out.println(d1 + "" + d2 + "" + d3 + "" + d4 + "" + d5 + "" + d6 + "" + d7 + "" + d8 + "" + d9);
