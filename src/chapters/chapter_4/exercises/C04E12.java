@@ -8,31 +8,28 @@ public class C04E12 {
 		Scanner input = new Scanner(System.in);
 
 		System.out.println("Ener a hex digit: ");
-		String s = input.next();
-		String test = "0123456789ABCDEF";
-		if (test.contains(s)) {
-			s = s.replaceAll("0", "0000");
-			s = s.replaceAll("1", "0001");
-			s = s.replaceAll("2", "0010");
-			s = s.replaceAll("3", "0011");
-			s = s.replaceAll("4", "0100");
-			s = s.replaceAll("5", "0101");
-			s = s.replaceAll("6", "0110");
-			s = s.replaceAll("7", "0111");
-			s = s.replaceAll("8", "1000");
-			s = s.replaceAll("9", "1001");
-			s = s.replaceAll("A", "1010");
-			s = s.replaceAll("B", "1011");
-			s = s.replaceAll("C", "1100");
-			s = s.replaceAll("D", "1101");
-			s = s.replaceAll("E", "1110");
-			s = s.replaceAll("F", "1111");
-			System.out.println("The binary value is " + s);
+		String hexString = input.nextLine();
 
-		} else {
-			System.out.println("Invalid Input.");
-			input.close();
+		if (hexString.length() != 1) {
+			System.out.println("You must enter exactly one character");
+			System.exit(1);
 		}
+
+		char ch = Character.toUpperCase(hexString.charAt(0));
+		int value = 0;
+		if (ch <= 'F' && ch >= 'A') {
+			value = ch - 'A' + 10;
+		} else if (Character.isDigit(ch)) {
+			value = ch - '0';
+		} else {
+			System.out.println(ch + " is an invalid input");
+			System.exit(0);
+		}
+
+		System.out.println("The decimal value for hex digit " + ch + " is " + Integer.toBinaryString(value));
+
+		input.close();
+
 	}
 
 }
