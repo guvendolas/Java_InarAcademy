@@ -1,21 +1,35 @@
 package chapters.chapter_4.exercises;
-import java.util.Scanner;
+
 public class C04E03 {
 
 	public static void main(String[] args) {
-		System.out.println("Enter the number of sides of the polygon: ");
+		double x1 = 51.5138505182;
+		double y1 = -0.15690922737098845;
 
-        Scanner input = new Scanner(System.in);
+		double x2 = 28.5383355;
+		double y2 = -81.37923649999999;
 
-        int numSides = input.nextInt();
+		double x3 = 32.0835407;
+		double y3 = -81.09983419999998;
 
-        System.out.println("Enter the length of the sides: ");
+		double x4 = 35.2270869;
+		double y4 = -80.84312669999997;
 
-        double lengthSides = input.nextDouble();
+		double side1 = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+		double side2 = Math.sqrt(Math.pow(x2 - x3, 2) + Math.pow(y2 - y3, 2));
+		double side3 = Math.sqrt(Math.pow(x1 - x3, 2) + Math.pow(y1 - y3, 2));
+		double s = (side1 + side2 + side3) / 2;
+		double area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
 
-        double area = (numSides * lengthSides * lengthSides) / (4 * Math.tan(Math.PI / numSides));
 
-        System.out.println("The area of your polygon is: " + area);
+		side1 = Math.sqrt(Math.pow(x1 - x3, 2) + Math.pow(y1 - y3, 2));
+		side2 = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
+		side3 = Math.sqrt(Math.pow(x1 - x4, 2) + Math.pow(y1 - y4, 2));
+		s = (side1 + side2 + side3) / 2;
+		area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3)) + area;
+
+		System.out.print("The area enclosed by 4 cities is " + area + " km^2");
+
 	}
 
 }
