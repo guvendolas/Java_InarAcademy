@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class C04E19 {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
 
 		System.out.print("Enter the first 9 digits of an ISBN as integer:");
-		String isbn = input.next();
+		String isbn = in.next();
 
 		int d1 = (int) (isbn.charAt(0)) - 48;
 		int d2 = (int) (isbn.charAt(1)) - 48;
@@ -28,7 +28,7 @@ public class C04E19 {
 			System.out.print('X');
 		} else {
 			System.out.print(d10);
-			input.close();
+			in.close();
 		}
 	}
 
