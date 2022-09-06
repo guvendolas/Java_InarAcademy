@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class C04E11 {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
 		System.out.println("Enter a decimal value (0 to 15): ");
-		int userAnswer = input.nextInt();
+		int userAnswer = in.nextInt();
 
 		if (userAnswer > 15 || userAnswer < 0) {
 			System.out.println(userAnswer + " is invalid number!");
@@ -46,7 +46,7 @@ public class C04E11 {
 		}
 
 		System.out.println("The hex value is " + Integer.toHexString(userAnswer).toUpperCase());
-		input.close();
+		in.close();
 	}
 
 }
