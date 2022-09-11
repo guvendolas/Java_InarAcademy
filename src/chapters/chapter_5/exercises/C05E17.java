@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class C05E17 {
 
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		System.out.print("Enter a number from 1 to 15: ");
-		int max = in.nextInt();
+		int max = input.nextInt();
 		int spaces = max;
 
 		for (int i = 1; i <= max; i++) {
