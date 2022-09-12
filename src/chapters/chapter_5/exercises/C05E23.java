@@ -4,11 +4,17 @@ public class C05E23 {
 
 	public static void main(String[] args) {
 
-		double rightAns = 0;
-
-		for (double i = 50000.0; i >= 1.0; i--) {
-			rightAns += (1 / i);
-		}
-		System.out.println("The result of adding 1/50,000 + 1/49,999 + ... + 1/1 = " + rightAns);
-	}
+		final int N = 50000;
+		   double sumL2R =0, sumR2L = 0;
+		    
+		    
+		   for(int i=1 ; i<=N; i++){
+		     sumL2R = sumL2R+ 1.0/i;
+		     sumR2L = sumR2L+ 1.0/(N-i+1);
+		    
+		   }
+		     
+		  System.out.println("Summation from left to right:" + sumL2R);
+		  System.out.println("Summation from right to left:" + sumR2L);
+}
 }
