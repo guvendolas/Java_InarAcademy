@@ -5,31 +5,30 @@ import java.util.Scanner;
 public class C05E17 {
 
 	public static void main(String[] args) {
+
+		// Create a Scanner object
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter a number from 1 to 15: ");
-		int max = input.nextInt();
-		int spaces = max;
 
-		for (int i = 1; i <= max; i++) {
-			String nums = "";
-			int digit = i;
+		// Prompt the user to enter an integer from 1 to 15
+		System.out.print("Enter the number of lines: ");
+		int numberOfLines = input.nextInt();
 
-			for (int s = spaces; s > 0; s--) {
-				nums += "   ";
+		// Display pyramid
+		for (int rows = 1; rows <= numberOfLines; rows++) {
+			// Create spaces in each row
+			for (int s = numberOfLines - rows; s >= 1; s--) {
+				System.out.print("  ");
 			}
-			spaces--;
-			while (digit >= 1) {
-				nums += (digit > 9) ? digit + " " : digit + "  ";
-				digit--;
+			// Create decending numbers in each row
+			for (int l = rows; l >= 2; l--) {
+				System.out.print(l + " ");
 			}
-
-			digit += 2;
-
-			while (digit <= i) {
-				nums += digit + "  ";
-				digit++;
+			// Create ascending number in each row
+			for (int r = 1; r <= rows; r++) {
+				System.out.print(r + " ");
 			}
-			System.out.println(nums);
+			// End line
+			System.out.println();
 		}
 	}
 }
