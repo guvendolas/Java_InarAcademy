@@ -6,7 +6,7 @@ public class C03E15 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("Guess a three digit number for the lottery:");
+		System.out.println("Guess a three digit number for the lottery ( two digit):");
 		int guess = input.nextInt();
 		int lottery = (int) (Math.random() * 900) + 100;
 
